@@ -1,0 +1,35 @@
+.MovieBox {
+    color: aliceblue;
+    border: 2px solid rgb(136, 136, 136);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MovieBox h2 {
+    text-align: center;
+    width: 100%;
+    height: 15vh;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.MovieBox img {
+    width: 100%;
+    height: 50vh;
+    padding: .5rem;
+    
+}
+.btn{
+    font-size: 1rem;
+    overflow: hidden;
+    margin: 1rem;
+    transition:.3s;
+    border-radius: 10px;
+}
+.btn:hover{
+    transform: scale(.90);
+    color:var(--bg-secondary);
+    background:var(--text-primary);
+}
