@@ -7,12 +7,42 @@
 }
 
 .Navbar button {
+  
   margin: 0.2rem;
   transition: 0.3s;
+}
+
+.Navbar{
+  display: flex;
 }
 
 .Navbar button:hover {
   transform: scale(0.95);
   color:var(--bg-secondary);
   background:var(--text-primary);
+}
+
+
+@media screen and (max-width:500px) {
+  .Header{
+    margin: 0 .5rem;
+  }
+  .Navbar button {
+    background: none;
+    width:5rem;
+    height: 3rem;
+    font-size: .8rem;
+    border-radius: 30px;
+    padding: 0;
+  }
+
+  .lang{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    
+  }
+
+
 }

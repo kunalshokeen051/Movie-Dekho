@@ -1,16 +1,21 @@
 import React from 'react'
 import css from './style/Header.module.css'
 import {IoMdGitMerge} from 'react-icons/io'
+import {motion} from 'framer-motion'
+import { duration } from '@mui/material'
 
 function Header() {
   return (
-    <div className={css.Header}>
+    <motion.div className={css.Header}
+    animate={{y:0}} initial={{y:-100}} 
+    transition={{type:'tween',ease:'linear', duration:.5}}
+    >
       <h1>Movie <span>Dekho</span></h1>
       <div className={css.Navbar}>
-        <button><IoMdGitMerge /> English </button>
+        <button className={css.lang} ><IoMdGitMerge /> English </button>
         <button>Sign Up</button>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
