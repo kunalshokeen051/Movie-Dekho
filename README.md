@@ -1,23 +1,11 @@
 <!-- Place this tag where you want the button to render. -->
 <GitHubButton href="https://github.com/kunalshokeen051/Movie-Dekho/archive/HEAD.zip" data-icon="octicon-download" data-size="large" aria-label="Download kunalshokeen051/Movie-Dekho on GitHub">Download</GitHubButton>
 
-some Screenshots:
-
-PC:
-![mobile (2)](https://user-images.githubusercontent.com/119399583/218533256-5d24cf54-07c4-4c2b-946c-f02f4d46f342.png)
-Tablet:
-![mobile (1)](https://user-images.githubusercontent.com/119399583/218533199-543db6f3-60d7-456e-8158-b3cda12d55f1.png)
-Mobile:
-![mobile](https://user-images.githubusercontent.com/119399583/218533238-f7f36677-540b-4062-89f6-78a0c211611e.png)
 
 
 
 
-
-
-
-
-
+![Blue and Red Games Store Landscape Banner (1)](https://user-images.githubusercontent.com/119399583/218537062-f7069799-8ded-4515-86df-b326138a0e9f.png)
 
 
 
