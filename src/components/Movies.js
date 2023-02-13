@@ -9,7 +9,8 @@ function Movies() {
   const navigate = useNavigate();
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState('');
-  const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=90e0806b4f289662f8fe2e21824c4ace`
+  const API_KEY = process.env.REACT_APP_API_KEY;
+  const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
 
   useEffect(() => {
     fetch(API_URL)
@@ -23,7 +24,7 @@ function Movies() {
   const searchMovie = async (e) => {
     e.preventDefault();
     try {
-      const url = `https://api.themoviedb.org/3/search/movie?api_key=90e0806b4f289662f8fe2e21824c4ace&query=${search}`
+      const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${search}`
       const res = await fetch(url);
       const data = await res.json();
       setMovie(data.results);
