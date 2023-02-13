@@ -9,18 +9,19 @@ function Movies() {
   const navigate = useNavigate();
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState('');
-  const API_KEY = process.env.REACT_APP_API_KEY;
+  const API_KEY = process.env.React_App_APIKEY;
   const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
+  console.log(API_KEY);
 
-  
+
   useEffect(() => {
     fetch(API_URL)
-    .then((res) => res.json())
-    .then(data => {
-      console.log(data)
-      setMovie(data.results)
-    })
-  },[API_URL])
+      .then((res) => res.json())
+      .then(data => {
+        // console.log(data)
+        setMovie(data.results)
+      })
+  }, [API_URL])
 
   const searchMovie = async (e) => {
     e.preventDefault();
@@ -47,8 +48,7 @@ function Movies() {
     <motion.div className={css.Movies} animate={{ opacity: 1 }}
       initial={{ opacity: 0 }} transition={{ duration: .5 }}>
       <motion.div className={css.movies_header}
-        animate={{ y: 0, opacity: 1 }} initial={{ y: -100, opacity: 0 }} transition={{ delay: .5, duration: .5 }}
-      >
+        animate={{ y: 0, opacity: 1 }} initial={{ y: -100, opacity: 0 }} transition={{ delay: .5, duration: .5 }}  >
         <div className={css.left}>
           <h1>Movie <span> Deekho</span></h1>
         </div>

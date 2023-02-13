@@ -31,11 +31,11 @@
     width: 5rem;
     height: 2rem;
     padding:1rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
     border-radius: 30px;
     padding: 0;
   }
-
+  
   .lang {
     display: flex;
     align-items: center;
@@ -48,10 +48,10 @@
   .Header {
     margin: 0;
   }
-
+  
   .Header h1 {
     margin: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
   }
 
   .Navbar{

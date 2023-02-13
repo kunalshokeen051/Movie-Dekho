@@ -97,7 +97,7 @@
   }
 
   .btn_back {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     padding: .5rem;
     border-radius: 5px;
     width: 20%;
@@ -106,19 +106,19 @@
   .right input {
     width: 70%;
     padding: 0 0.2rem;
-    font-size: 0.5rem;
+    font-size: 1rem;
     outline: none;
   }
 
   .right button {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .right input::placeholder {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
   }
 
   .grid_container {
