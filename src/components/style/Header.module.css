@@ -4,45 +4,57 @@
   align-items: center;
   margin: 0 1rem;
   color: var(--text-primary);
+  height: 10vh;
 }
 
 .Navbar button {
-  
   margin: 0.2rem;
   transition: 0.3s;
 }
 
-.Navbar{
+.Navbar {
   display: flex;
 }
 
 .Navbar button:hover {
   transform: scale(0.95);
-  color:var(--bg-secondary);
-  background:var(--text-primary);
+  color: var(--bg-secondary);
+  background: var(--text-primary);
 }
 
-
-@media screen and (max-width:500px) {
-  .Header{
-    margin: 0 .5rem;
+@media screen and (max-width: 910px) {
+  .Header {
+    margin: 0 0.5rem;
   }
   .Navbar button {
     background: none;
-    width:5rem;
-    height: 3rem;
-    font-size: .8rem;
+    width: 5rem;
+    height: 2rem;
+    padding:1rem;
+    font-size: 0.7rem;
     border-radius: 30px;
     padding: 0;
   }
 
-  .lang{
+  .lang {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 4px;
-    
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Header {
+    margin: 0;
   }
 
+  .Header h1 {
+    margin: 0.5rem;
+    font-size: 1.2rem;
+  }
 
+  .Navbar{
+    width: 40%;
+  }
 }

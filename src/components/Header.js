@@ -8,8 +8,7 @@ function Header() {
   return (
     <motion.div className={css.Header}
     animate={{y:0}} initial={{y:-100}} 
-    transition={{type:'tween',ease:'linear', duration:.5}}
-    >
+    transition={{type:'tween',ease:'linear', duration:.5}} >
       <h1>Movie <span>Dekho</span></h1>
       <div className={css.Navbar}>
         <button className={css.lang} ><IoMdGitMerge /> English </button>

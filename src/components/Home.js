@@ -15,11 +15,11 @@ function Home() {
   return (
     <div className={css.Home}>
       <Header />
+      {/* <h1 style={{color:'white'}}>screen Width: {window.innerWidth}px</h1> */}
       <div className={css.container}>
         <motion.div className={css.left}
           animate={{ opacity: 1,x:0 }} initial={{ opacity: 0,x:-50 }}
-          transition={{ type: 'tween', ease: 'backInOut', duration: 1, delay: .5 }}
-        >
+          transition={{ type: 'tween', ease: 'backInOut', duration: 1, delay: .5 }}>
           <Slickslider />
         </motion.div>
         <motion.div className={css.right}

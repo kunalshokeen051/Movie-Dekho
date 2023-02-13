@@ -34,7 +34,7 @@ function Movies() {
   }
 
   const goBack = () => {
-navigate('/');
+    navigate('/');
   }
 
   const changeHandler = (e) => {
@@ -42,15 +42,15 @@ navigate('/');
   }
 
   return (
-    <motion.div className={css.Movies} animate={{opacity:1}} 
-    initial={{opacity:0}} transition={{duration:.5}}>
+    <motion.div className={css.Movies} animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }} transition={{ duration: .5 }}>
       <motion.div className={css.movies_header}
-      animate={{y:0,opacity:1}} initial={{y:-100,opacity:0}} transition={{delay:.5, duration:.5}} 
+        animate={{ y: 0, opacity: 1 }} initial={{ y: -100, opacity: 0 }} transition={{ delay: .5, duration: .5 }}
       >
         <div className={css.left}>
           <h1>Movie <span> Deekho</span></h1>
         </div>
-          <button type='text' onClick={goBack}>Go Back</button>
+        <button className={css.btn_back} type='text' onClick={goBack}>Go Back</button>
         <form action="" onSubmit={searchMovie} className={css.right}>
           <input type="search" name='query' value={search} placeholder='Search Here..' onChange={changeHandler} />
           <button type='submit' className='search_button'>Search</button>

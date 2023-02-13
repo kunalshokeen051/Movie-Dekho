@@ -1,58 +1,58 @@
 .MovieBox {
-    color: aliceblue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 0 10px 0 #ababab;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 0 0 5px 0 #646464;
+}
+.MovieBox:hover {
+    box-shadow: 0 0 12px 0 #ababab;
+  border: none;
 }
 
 .MovieBox h2 {
-    text-align: center;
-    width: 100%;
-    height: 15vh;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 15vh;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .MovieBox img {
-    width: 100%;
-    height: 50vh;
-    padding: .5rem;
-    
+  width: 100%;
+  height: 50vh;
+  padding: 0.5rem;
 }
-.btn{
-    font-size: 1rem;
-    overflow: hidden;
-    margin: 1rem;
-    transition:.3s;
-    border-radius: 10px;
+.btn {
+  font-size: 1rem;
+  overflow: hidden;
+  margin: 1rem;
+  transition: 0.3s;
+  border-radius: 10px;
 }
-.btn:hover{
-    transform: scale(.90);
-    color:var(--bg-secondary);
-    background:var(--text-primary);
+.btn:hover {
+  transform: scale(0.9);
+  color: var(--bg-secondary);
+  background: var(--text-primary);
 }
 
+@media screen and (max-width: 910px) {
+  .MovieBox {
+  }
 
-@media screen and (max-width:500px) {
-    .MovieBox{
-
-    }
-  
-.MovieBox h2 {
+  .MovieBox h2 {
     height: 5vh;
-    margin: .5rem 0;
-    padding: 0 .2rem;
-    font-size: .8rem;
-}
-.MovieBox img {
+    margin: 0.5rem 0;
+    padding: 0 0.2rem;
+    font-size: 0.8rem;
+  }
+  .MovieBox img {
     height: 30vh;
-    
-}
-.btn{
-    font-size: .5rem;
-    margin: .5rem;
+  }
+  .btn {
+    font-size: 0.5rem;
+    margin: 0.5rem;
     border-radius: 30px;
-}
+  }
 }
