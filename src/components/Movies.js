@@ -12,14 +12,15 @@ function Movies() {
   const API_KEY = process.env.REACT_APP_API_KEY;
   const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
 
+  
   useEffect(() => {
     fetch(API_URL)
-      .then((res) => res.json())
-      .then(data => {
-        console.log(data)
-        setMovie(data.results)
-      })
-  }, [])
+    .then((res) => res.json())
+    .then(data => {
+      console.log(data)
+      setMovie(data.results)
+    })
+  },[API_URL])
 
   const searchMovie = async (e) => {
     e.preventDefault();
