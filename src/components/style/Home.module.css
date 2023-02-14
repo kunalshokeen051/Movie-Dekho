@@ -42,6 +42,14 @@
   border-radius: 5px;
 }
 
+.Spinner_module{
+  display: none;
+}
+
+.active{
+display: block;
+}
+
 @media screen and (max-width: 910px) {
   .container {
     padding: 0 0.2rem;
