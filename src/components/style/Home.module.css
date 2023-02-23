@@ -13,7 +13,6 @@
 
 .container {
   display: flex;
-  /* border: 2px solid red; */
 }
 
 .left {
@@ -40,6 +39,11 @@
 
 .right button {
   border-radius: 5px;
+  
+}
+.right button:hover {
+transform: scale(.95);
+background-color: rgb(140, 11, 11);
 }
 
 .Spinner_module{

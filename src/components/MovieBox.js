@@ -17,7 +17,7 @@ function MovieBox({ title, poster_path, vote_average, release_date, overview }) 
       whileInView={{ x: 0, opacity: 1 }} initial={{ x: -100, opacity: 0 }}
       viewport={{ once: true }} transition={{ delay: .3, duration: .8 }} >
       <img src={API_IMG + poster_path} alt="" loading='lazy' onClick={handleShow} />
-      <h2>{title}</h2>
+      <div className={css.overlay}><h2>{title}</h2></div>
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

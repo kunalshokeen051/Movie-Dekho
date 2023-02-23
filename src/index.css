@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 
-
-
 *
 *::before,
 *::after {
@@ -14,7 +12,7 @@ box-sizing: border-box;
 
 body {
   margin: 0;
-  font-family: "poppins", sans-serif;
+  font-family: 'Roboto', sans-serif;
   background:var(--bg-primary);
   color: var(--text-primary);
 

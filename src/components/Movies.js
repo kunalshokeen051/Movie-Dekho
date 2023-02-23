@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react'
 import css from './style/Movies.module.css'
 import MovieBox from "./MovieBox";
 import { motion } from 'framer-motion';
+import ReactPlayer from 'react-player/lazy'
 import { useNavigate } from 'react-router-dom';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 let page = 1;
 
@@ -20,6 +23,7 @@ function Movies() {
       .then((res) => res.json())
       .then(data => {
         setMovie(data.results)
+        AOS.init();
       })
   }, [API_URL])
 
@@ -37,27 +41,27 @@ function Movies() {
   }
 
   const navPageForward = async (e) => {
-      page = page + 1;
-      const url = API_URL + '&page=' + page;
-      console.log(url)
-      const res = await fetch(url);
-      const data = await res.json();
-      setMovie(data.results);
-    }
+    page = page + 1;
+    const url = API_URL + '&page=' + page;
+    console.log(url)
+    const res = await fetch(url);
+    const data = await res.json();
+    setMovie(data.results);
+  }
 
   const navPageBackward = async (e) => {
-    if(page != 1){
+    if (page !== 1) {
       page = page - 1;
     }
-    else{
+    else {
       page = 1;
     }
-      const url = API_URL + '&page=' + page;
-      console.log(url)
-      const res = await fetch(url);
-      const data = await res.json();
-      setMovie(data.results);
-    }
+    const url = API_URL + '&page=' + page;
+    console.log(url)
+    const res = await fetch(url);
+    const data = await res.json();
+    setMovie(data.results);
+  }
 
   const goBack = () => {
     navigate('/');
@@ -70,29 +74,77 @@ function Movies() {
   return (
     <motion.div className={css.Movies} animate={{ opacity: 1 }}
       initial={{ opacity: 0 }} transition={{ duration: .5 }}>
-      <motion.div className={css.movies_header}
-        animate={{ y: 0, opacity: 1 }} initial={{ y: -100, opacity: 0 }} transition={{ delay: .5, duration: .5 }}  >
-        <div className={css.left}>
+      <motion.div className={css.movies_header}>
+        <div className={css.left} >
           <h1>Movie <span> Deekho</span></h1>
         </div>
-        <button className={css.btn_back} type='text' onClick={goBack}>Go Back</button>
+        <button style={{ height: '100px' }} className={css.btn_back} type='text' onClick={goBack}>Go Back</button>
         <form action="" onSubmit={searchMovie} className={css.right}>
           <input type="search" name='query' value={search} placeholder='Search Here..' onChange={changeHandler} />
           <button type='submit' className='search_button'>Search</button>
         </form>
       </motion.div>
-      <motion.div className={css.grid_container}>
-        {movie.map((movieReq) =>
-          <MovieBox key={movieReq.id} {...movieReq} />)}
-      </motion.div>
+      <div className={css.banner}>
+        <h1 data-aos="fade-left" data-aos-duration='1000'> LET THE FUN BEGIN</h1>
+        <div className={css.players} data-aos="fade-right" data-aos-duration='1000' >
+          <ReactPlayer
+            url='https://youtu.be/mVsJXiI60a0'
+            playing='true'
+            volume={0}
+            loop='true'
+            muted='true'
+            width={'100%'}
+            height={'400px'}
+            playsinline='true'
+          />
+
+          <ReactPlayer
+            url='https://www.youtube.com/watch?v=rrwycJ08PSA&t=3s'
+            playing='true'
+            volume={0}
+            loop='true'
+            muted='true'
+            width={'100%'}
+            height={'400px'}
+            playsinline='true'
+          />
+
+          <ReactPlayer
+            url='https://www.youtube.com/watch?v=oZn3qSgmLqI'
+            playing='true'
+            volume={0}
+            loop='true'
+            muted='true'
+            width={'100%'}
+            height={'400px'}
+            playsinline='true'
+          />
+        </div>
+      </div>
+      <div  className={css.movies_body}>
+        <h1>Now Trending ...</h1>
         <div className={css.navigationBar}>
-        <h1 style={{color:'white',fontSize:'1rem'}}>{'Page' + " " + page}</h1>
+          <h1 style={{ color: 'white', fontSize: '1rem' }}>{'Page ' + page}</h1>
+          <div>
+            <button onClick={navPageBackward} value='+' >{'<'}</button>
+            <button onClick={navPageForward} value='-'>{'>'}</button>
+          </div>
+        </div>
+        <motion.div className={css.grid_container}>
+          {movie.map((movieReq) =>
+            <MovieBox key={movieReq.id} {...movieReq} />)}
+        </motion.div>
+      </div>
+
+      <div className={css.navigationBar}>
+        <h1 style={{ color: 'white', fontSize: '1rem' }}>{'Page ' + page}</h1>
         <div>
           <button onClick={navPageBackward} value='+' >{'<'}</button>
           <button onClick={navPageForward} value='-'>{'>'}</button>
         </div>
-        </div>
+      </div>
     </motion.div>
+
   )
 }
 

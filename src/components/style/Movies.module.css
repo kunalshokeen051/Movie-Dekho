@@ -1,5 +1,18 @@
-.Movies {
-  background: var(--bg-primary);
+.movies_header::before {
+  position:absolute;
+  content: "";
+  background: url('../../assets/wallpaperflare.com_wallpaper\ \(1\).jpg') no-repeat center center/cover;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-attachment: fixed;
+}
+
+.movies_header{
+  width: 100%;
+  height: 100vh;
 }
 
 .grid_container {
@@ -8,7 +21,8 @@
   grid-column-gap: 1rem;
   grid-row-gap: 2rem;
   justify-content: center;
-  margin: 0 0.8rem;
+  background: var(--bg-primary);
+  padding: 0 3rem;
 }
 
 .right {
@@ -50,23 +64,59 @@
   height: 20vh;
 }
 
-.navigationBar{
- width: 100%;
- height: 15vh;
+.movies_body h1{
+  background-color: #000;
+  margin: 0;
+  padding: 1rem;
+  color: var(--text-primary);
+  font-size: 3.5rem;
+}
+
+.navigationBar {
+  width: 100%;
+  padding:2rem 0;
+  height: 15vh;
   display: flex;
-  margin:1rem 0 0 0;
   justify-content: space-around;
+  background-color: #000;
+}
+.navigationBar div {
+  display: flex;
+  gap: 10px;
+}
+
+.navigationBar button {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.navigationBar button:hover {
+  transform: scale(1.1);
+  background-color: rgb(125, 15, 15);
+}
+
+.banner{
+  width: 100%;
+  height:600px;
+  background-color:var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.navigationBar div{
-display: flex;
-gap: 10px;
+
+.banner h1{
+  color:rgb(255, 56, 56);
+  font-size: 100px;
+  margin: 1rem;
 }
 
-.navigationBar button:hover{
-transform: scale(1.1);
-background-color: rgb(125, 15, 15);
-
+.players{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  overflow:hidden;
+  height: 400px;
 }
 
 
@@ -118,7 +168,7 @@ background-color: rgb(125, 15, 15);
 
   .btn_back {
     font-size: 0.8rem;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 5px;
     width: 20%;
   }

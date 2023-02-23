@@ -30,31 +30,38 @@
     background: none;
     width: 5rem;
     height: 2rem;
-    padding:1rem;
+    padding: 1rem;
     font-size: 1rem;
     border-radius: 30px;
     padding: 0;
   }
-  
-  .lang {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-  }
+}
+
+.menu {
+  display: none;
+  top:-100%;
+  transition: 5s;
+}
+
+.active {
+  display: block;
+top: 10%;
 }
 
 @media screen and (max-width: 500px) {
   .Header {
     margin: 0;
   }
-  
+
   .Header h1 {
     margin: 0.5rem;
     font-size: 1.7rem;
   }
 
-  .Navbar{
-    width: 40%;
+  .Navbar {
+    width: 50%;
+  }
+
+  .Navbar button {
   }
 }
