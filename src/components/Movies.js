@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, lazy } from 'react'
 import css from './style/Movies.module.css'
 import MovieBox from "./MovieBox";
-import { motion } from 'framer-motion';
+import { LazyMotion, motion } from 'framer-motion';
 import ReactPlayer from 'react-player/lazy'
-// import { useNavigate } from 'react-router-dom';
+import Spinner from './Spinner'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 let page = 1;
 
 function Movies() {
-  // const navigate = useNavigate();
   const [movie, setMovie] = useState([]);
   const [search, setSearch] = useState('');
   const [searched, setSearched] = useState(false);
+  const [load, setLoad] = useState(false);
   const API_KEY = process.env.React_App_APIKEY;
   const API_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
   console.log(API_KEY);
@@ -72,8 +72,11 @@ function Movies() {
   }
 
   return (
-    <motion.div className={css.Movies} animate={{ opacity: 1 }}
-      initial={{ opacity: 0 }} transition={{ duration: .5 }}>
+    <motion.div className={css.Movies} onLoad={() =>{setLoad(true)}} 
+    animate={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ duration: .5 }}>
+          <div style={load?{display:'none'}:{display:"block"}} >
+        <Spinner />
+      </div>
       <motion.div className={searched?`${css.movies_header} ${css.hidden}`:`${css.movies_header}`}>
         <div className={css.left} >
           <h1>Movie Deekho</h1>
