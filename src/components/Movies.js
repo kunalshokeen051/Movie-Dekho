@@ -121,7 +121,7 @@ function Movies() {
         </div>
       </div>
       <div  className={css.movies_body}>
-        <h1>{searched?`Search result for ${search.toLocaleUpperCase()}`:'Now Trending ...'}</h1>
+        <h1>{searched?`Search result for ${search.toLocaleUpperCase()}`:'Now Trending'}</h1>
         <div className={css.navigationBar}>
           <h1 style={{ color: 'white', fontSize: '1rem' }}>{'Page ' + page}</h1>
           <button className={searched === false?css.hidden:''}

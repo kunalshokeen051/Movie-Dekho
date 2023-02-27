@@ -215,7 +215,7 @@ justify-content: center;
   .right input {
     width: 70%;
     padding: 0 0.2rem;
-    font-size: .5rem;
+    font-size:1rem;
     outline: none;
   }
 
@@ -231,10 +231,10 @@ justify-content: center;
 
     .players{
       display: grid;
-      gap: 10px;
+      grid-template-columns: repeat(1,1fr);
       width: 100%;
       overflow:scroll;
-      height: 500px;
+      height: fit-content;
     }
     
   .right button {
