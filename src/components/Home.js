@@ -11,7 +11,7 @@ function Home(props) {
   const navigate = useNavigate();
 
   const trending = () => {
-    navigate('/movieList');
+    navigate('/trending');
   }
   
   return (

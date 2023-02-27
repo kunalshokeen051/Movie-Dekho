@@ -76,9 +76,9 @@ function Movies() {
       initial={{ opacity: 0 }} transition={{ duration: .5 }}>
       <motion.div className={css.movies_header}>
         <div className={css.left} >
-          <h1>Movie <span> Deekho</span></h1>
+          <h1>Movie Deekho</h1>
         </div>
-        <button style={{ height: '100px' }} className={css.btn_back} type='text' onClick={goBack}>Go Back</button>
+        {/* <button style={{ height: '100px' }} className={css.btn_back} type='text' onClick={goBack}>Go Back</button> */}
         <form action="" onSubmit={searchMovie} className={css.right}>
           <input type="search" name='query' value={search} placeholder='Search Here..' onChange={changeHandler} />
           <button type='submit' className='search_button'>Search</button>
@@ -86,9 +86,9 @@ function Movies() {
       </motion.div>
       <div className={css.banner}>
         <h1 data-aos="fade-left" data-aos-duration='1000'> LET THE FUN BEGIN</h1>
-        <div className={css.players} data-aos="fade-right" data-aos-duration='1000' >
+        <div className={css.players} data-aos="fade-up" data-aos-duration='1000' >
           <ReactPlayer
-            url='https://youtu.be/mVsJXiI60a0'
+            url='https://streamable.com/x4wi5s'
             playing='true'
             volume={0}
             loop='true'
@@ -99,7 +99,7 @@ function Movies() {
           />
 
           <ReactPlayer
-            url='https://www.youtube.com/watch?v=rrwycJ08PSA&t=3s'
+            url='https://streamable.com/kw5dqk'
             playing='true'
             volume={0}
             loop='true'
@@ -110,7 +110,7 @@ function Movies() {
           />
 
           <ReactPlayer
-            url='https://www.youtube.com/watch?v=oZn3qSgmLqI'
+            url='https://streamable.com/h5ona4'
             playing='true'
             volume={0}
             loop='true'
@@ -132,7 +132,7 @@ function Movies() {
         </div>
         <motion.div className={css.grid_container}>
           {movie.map((movieReq) =>
-            <MovieBox key={movieReq.id} {...movieReq} />)}
+            <MovieBox key={movieReq.id} {...movieReq}/>)}
         </motion.div>
       </div>
 

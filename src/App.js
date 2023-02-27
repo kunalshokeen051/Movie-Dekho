@@ -12,7 +12,7 @@ const [isSignin, setIsSignin] = useState(false);
     <Router>
       <Routes>
         <Route path='/' element={<Home  status={isSignin} />}/>
-        <Route path='/movieList' element={<Movies  />}/>
+        <Route path='/trending' element={<Movies  />}/>
         <Route path='/signin' element={<Signin status={isSignin} setStatus={setIsSignin}  />}/>
       </Routes>
     </Router>
