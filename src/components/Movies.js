@@ -59,7 +59,7 @@ function Movies() {
     }
     else {
       page = 1;
-    }
+    } 
     const url = API_URL + '&page=' + page;
     console.log(url)
     const res = await fetch(url);

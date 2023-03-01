@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import css from './style/MovieBox.module.css'
 import { Modal } from 'react-bootstrap';
 import { motion } from 'framer-motion'
+import trailer from '../assets/The Dark - Official Movie Trailer (2018).mp4';
 
 
 const API_IMG = "https://image.tmdb.org/t/p/w500"
@@ -17,7 +18,9 @@ function MovieBox({ title, poster_path, vote_average, release_date, overview }) 
       whileInView={{ x: 0, opacity: 1 }} initial={{ x: -100, opacity: 0 }}
       viewport={{ once: true }} transition={{ delay: .3, duration: .8 }} >
       <img src={API_IMG + poster_path} alt="" loading='lazy' onClick={handleShow} />
-      <div className={css.overlay}><h2>{title}</h2></div>
+      <motion.div className={css.overlay} >
+      <h2>{title}</h2>
+      </motion.div>
 
       <Modal show={show} onHide={handleClose} size="xl">
         <Modal.Header closeButton>
