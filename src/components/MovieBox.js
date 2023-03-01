@@ -8,9 +8,9 @@ const API_IMG = "https://image.tmdb.org/t/p/w500"
 
 function MovieBox({ title, poster_path, vote_average, release_date, overview }) {
   const [show, setShow] = useState(false);
-
   const handleShow = () => { setShow(true) };
   const handleClose = () => { setShow(false) };
+
 
   return (
     <motion.div className={css.MovieBox}
@@ -19,7 +19,7 @@ function MovieBox({ title, poster_path, vote_average, release_date, overview }) 
       <img src={API_IMG + poster_path} alt="" loading='lazy' onClick={handleShow} />
       <div className={css.overlay}><h2>{title}</h2></div>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} size="xl">
         <Modal.Header closeButton>
           <Modal.Title>Movie Details</Modal.Title>
         </Modal.Header>

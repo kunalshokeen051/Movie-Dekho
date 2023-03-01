@@ -1,7 +1,7 @@
-import React, { useState, useEffect, lazy } from 'react'
+import React, { useState, useEffect} from 'react'
 import css from './style/Movies.module.css'
 import MovieBox from "./MovieBox";
-import { LazyMotion, motion } from 'framer-motion';
+import {motion } from 'framer-motion';
 import ReactPlayer from 'react-player/lazy'
 import Spinner from './Spinner'
 import AOS from 'aos';
@@ -90,7 +90,7 @@ function Movies() {
         <h1 data-aos="fade-left" data-aos-duration='1000'> LET THE FUN BEGIN</h1>
         <div className={css.players} data-aos="fade-up" data-aos-duration='1000' >
           <ReactPlayer
-            url='https://streamable.com/x4wi5s'
+            url='https://www.youtube.com/watch?v=ga0iTWXCGa0'
             playing='true'
             volume={0}
             loop='true'
@@ -101,7 +101,7 @@ function Movies() {
           />
 
           <ReactPlayer
-            url='https://streamable.com/kw5dqk'
+            url='https://www.youtube.com/watch?v=cq2iTHoLrt0'
             playing='true'
             volume={0}
             loop='true'
@@ -112,7 +112,7 @@ function Movies() {
           />
 
           <ReactPlayer
-            url='https://streamable.com/h5ona4'
+            url='https://www.youtube.com/watch?v=_InqQJRqGW4'
             playing='true'
             volume={0}
             loop='true'
