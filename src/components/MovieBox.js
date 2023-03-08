@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import css from './style/MovieBox.module.css'
 import { Modal } from 'react-bootstrap';
 import { motion } from 'framer-motion'
-import trailer from '../assets/The Dark - Official Movie Trailer (2018).mp4';
 
 
 const API_IMG = "https://image.tmdb.org/t/p/w500"
