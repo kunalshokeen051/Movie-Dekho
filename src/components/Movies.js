@@ -79,7 +79,7 @@ function Movies() {
       <div style={load ? { display: 'none' } : { display: "block" }} >
         <Spinner />
       </div>
-      <motion.div className={searched ? `${css.movies_header} ${css.hidden}` : `${css.movies_header}`}>
+      <div  data-aos="zoom-out" data-aos-duration='1000' className={searched ? `${css.movies_header} ${css.hidden}` : `${css.movies_header}`}>
         <div className={css.left} >
           <h1>Movie Deekho</h1>
         </div>
@@ -87,8 +87,8 @@ function Movies() {
           <input type="search" name='query' value={search} placeholder='Search Here..' onChange={changeHandler} />
           <button type='submit' className='search_button'>Search</button>
         </form>
-      </motion.div>
-      <div className={css.hero}>
+      </div>
+      <div className={searched ? `${css.hero} ${css.hidden}` : `${css.hero}`} >
         <motion.div className={css.top_container} initial={{opacity:0,y:500}} whileInView={{opacity:1,y:0}} transition={{type:'tween', duration:.8}}>
           <motion.div className={css.content} initial={{opacity:0}} whileInView={{opacity:1}} transition={{type:'tween', duration:1,delay:1}}>
           <h1>Welcome to Movie Deekho</h1>
@@ -106,7 +106,7 @@ function Movies() {
       </div>
       <div className={searched ? `${css.banner} ${css.hidden}` : `${css.banner}`} >
         <h1 data-aos="fade-left" data-aos-duration='1000'> LET THE FUN BEGIN</h1>
-        <div className={css.players} data-aos="fade-up" data-aos-duration='1000' >
+        <div className={css.players} data-aos="zoom-out" data-aos-duration='1000' >
           <ReactPlayer
             url='https://www.youtube.com/watch?v=ga0iTWXCGa0'
             playing='true'
@@ -116,6 +116,7 @@ function Movies() {
             width={'100%'}
             height={'400px'}
             playsinline='true'
+            controls={'false'}
           />
 
           <ReactPlayer

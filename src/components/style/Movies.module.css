@@ -276,7 +276,7 @@ justify-content: center;
     width: 50%;
     height: 5vh;
     display: flex;
-    align-items: flex-stRT;
+    align-items: flex-start;
   }
   
   .movies_body h1{
@@ -299,20 +299,18 @@ justify-content: center;
 
   .banner{
     width: 100%;
-    height:100vh;
+    height:500px;
   }
 
   .banner h1{
     font-size: 50px;
     }
 
-
     .players{
-      display: grid;
-      grid-template-columns: repeat(1,1fr);
-      width: 100%;
-      overflow:scroll;
-      height: fit-content;
+display: flex;
+flex-direction: column;
+overflow: scroll;
+      height: 400px;
     }
     
   .right button {
